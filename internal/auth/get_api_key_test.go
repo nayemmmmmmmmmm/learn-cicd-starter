@@ -33,14 +33,14 @@ func TestGetAPIKey(t *testing.T) {
 		},
 		{
 			key:       "Authorization",
-			value:     "Apikey xxxxxx",
+			value:     "ApiKey xxxxxx",
 			expect:    "xxxxxx",
 			expectErr: "not expecting an error",
 		},
 	}
 
 	for i, test := range tests {
-		t.Run(fmt.Sprintf("TestGetAPIKey case #%v:", i), func(t *testing.T) {
+		t.Run(fmt.Sprintf("TestGetAPIKey Case #%v:", i), func(t *testing.T) {
 			header := http.Header{}
 			header.Add(test.key, test.value)
 
